@@ -3,3 +3,41 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #333;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+
+  div, input {
+    width: 30%;
+    font-size: 30px;
+    padding: 10px;
+  }
+  div {
+    font-weight: 900;
+  }
+
+  input {
+    border: none;
+    text-align: center;
+    outline: none;
+    background: whitesmoke;
+    border-radius: 0 0 16px 16px;
+  }
+}
