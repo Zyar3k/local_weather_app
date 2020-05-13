@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Clock from './components/Clock/Clock';
+import DatePL from './components/DatePL/DatePL';
 const api = {
   key: '&APPID=183d4af22c5b654ede3953c40f485cdf',
   base: 'https://api.openweathermap.org/data/2.5/weather?q=',
@@ -31,7 +32,9 @@ function App() {
 
     <div className="app">
       <header>
-        <div>Środa, 13 maja 2020</div>
+        <div>
+          <DatePL  />
+        </div>
         <input
         type='text'
         onChange={event => setQuery(event.target.value)}
