@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Clock from './components/Clock/Clock';
 const api = {
   key: '&APPID=183d4af22c5b654ede3953c40f485cdf',
   base: 'https://api.openweathermap.org/data/2.5/weather?q=',
@@ -38,7 +39,9 @@ function App() {
         onKeyPress={search}
         placeholder="Wpisz miasto..."
         />
-        <div>20:20:38</div>
+        <div>
+          <Clock />
+        </div>
       </header>
       <div>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae nunc sed velit dignissim sodales ut eu sem. Aliquet risus feugiat in ante metus dictum. Sem nulla pharetra diam sit. At augue eget arcu dictum varius. Libero id faucibus nisl tincidunt eget nullam non. Sit amet risus nullam eget felis eget nunc lobortis. Rhoncus urna neque viverra justo nec ultrices dui. Mauris a diam maecenas sed enim. Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Condimentum lacinia quis vel eros donec ac odio.
