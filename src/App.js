@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 import Clock from './components/Clock/Clock';
 import DatePL from './components/DatePL/DatePL';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, faTwitch, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faCloudSunRain, faSun, faBolt, faCloud, faSnowflake } from '@fortawesome/free-solid-svg-icons';
+import logo from './images/openweather-logo.png';
 
 const api = {
   key: '&APPID=183d4af22c5b654ede3953c40f485cdf',
   base: 'https://api.openweathermap.org/data/2.5/weather?q=',
   metric: '&units=metric'
-}
-
+};
 
 function App() {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
-
   const url = `${api.base}${query}${api.key}${api.metric}`;
 
   const search = event => {
@@ -27,12 +27,9 @@ function App() {
           setQuery('');
         });
     }
-  };
-  
+  };  
   
   return (
-
-
     <div className="app">
       <header>
         <div><DatePL /></div>
@@ -47,12 +44,14 @@ function App() {
           <Clock />
         </div>
       </header>
-      
       {(typeof weather.main != "undefined") ? (
       <div className='content'>
-        <div className='bg1'>
-          <h5>LOGO</h5>
-          {/* <p>{weather.name}</p> */}
+        <div className='bg1 logo'>
+
+          <a href='https://openweathermap.org/'>
+          <img src={logo} alt='logo' />
+          </a>
+
         </div>
         <div className='bg1'>
           <h5>Miasto</h5>
@@ -105,19 +104,19 @@ function App() {
         
         <div className='bg1 sm'>
           {/* <h5>Zachód słońca</h5> */}
-          <h2><FontAwesomeIcon icon={faFacebook} /></h2>
+          <p><FontAwesomeIcon icon={faFacebook} /></p>
         </div>
         <div className='bg2 sm'>
           {/* <h5>Zachód słońca</h5> */}
-          <h2><FontAwesomeIcon icon={faInstagram} /></h2>
+          <p><FontAwesomeIcon icon={faInstagram} /></p>
         </div>
         <div className='bg2 sm'>
           {/* <h5>Zachód słońca</h5> */}
-          <h2><FontAwesomeIcon icon={faTwitter} /></h2>
+          <p><FontAwesomeIcon icon={faTwitter} /></p>
         </div>
         <div className='bg2 sm'>
           {/* <h5>Zachód słońca</h5> */}
-          <h2><FontAwesomeIcon icon={faLinkedinIn} /></h2>
+          <p><FontAwesomeIcon icon={faLinkedinIn} /></p>
         </div>
         
 
