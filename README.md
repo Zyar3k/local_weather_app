@@ -10,7 +10,7 @@
 ### Installation
 
 
-To run client
+To run app
 ```sh
 npm i / yarn install
 npm start / yarn start
