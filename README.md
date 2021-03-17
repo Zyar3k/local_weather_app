@@ -1,6 +1,6 @@
 # Local weather
 
-[LIVE DEMO](https://agitated-aryabhata-cef99e.netlify.app/)
+### [LIVE DEMO](https://agitated-aryabhata-cef99e.netlify.app/)
 
 > Simple weather application made in React. Searching cities by name. Data comes from OpenWeather
 ##### Used in project
